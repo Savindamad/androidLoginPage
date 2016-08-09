@@ -9,13 +9,14 @@
     mysqli_stmt_execute($statement);
     
     mysqli_stmt_store_result($statement);
-    mysqli_stmt_bind_result($statement, $user_id, $username, $password, $user_type);
+    mysqli_stmt_bind_result($statement, $user_id, $username, $password, $user_type ,$f_name ,$l_name);
     
     $response = array();
     $response["success"] = false;  
     
     while(mysqli_stmt_fetch($statement)){
         $response["success"] = true;  
+        $response["user_id"] = "w001";
         $response["name"] = $name;
         $response["username"] = $username;
         $response["password"] = $password;
