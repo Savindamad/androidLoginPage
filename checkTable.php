@@ -1,7 +1,7 @@
 <?php
 	$con = mysqli_connect("br-cdbr-azure-south-b.cloudapp.net", "b50735a87d1621", "8a720e5f", "smart_rms");
 
-	$tableNum = $_POST["tableNum"];
+	$tableNum = "1";
 
 	$sql_query = "select waiter_id from table where table_no like '$tableNum';";
 
