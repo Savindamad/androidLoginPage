@@ -3,7 +3,7 @@
 
 	$tableNum = "1";
 
-	$sql_query = "select waiter_id from table where table_no like '$tableNum';";
+	$sql_query = "select waiter_id from table where table_no='$tableNum';";
 
 	$result = mysqli_query($con,$sql_query);
 	if(mysqli_num_rows($result)>0){
