@@ -9,7 +9,13 @@
 	if(mysqli_num_rows($result)>0){
         $row = mysqli_fetch_assoc($result);
         $userID = $row["waiter_id"];
-        echo $userID;
+        if($userID==NULL){
+        	echo "none";
+        }
+        else{
+        	echo $userID;
+        }
+        
     }
     else{
         echo "Error";
