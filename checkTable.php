@@ -4,12 +4,12 @@
 	$tableNum = "1";
 	$username = "waiter1";
 
-	$sql_query = "select user_id from user_account where username like '$username';";
+	$sql_query = "select waiter_id from table_types where table_no like '$tableNum';";
 
 	$result = mysqli_query($con,$sql_query);
 	if(mysqli_num_rows($result)>0){
         $row = mysqli_fetch_assoc($result);
-        $userID = $row["user_id"];
+        $userID = $row["waiter_id"];
         echo $userID;
         
     }
