@@ -1,8 +1,7 @@
 <?php
 	$con = mysqli_connect("br-cdbr-azure-south-b.cloudapp.net", "b50735a87d1621", "8a720e5f", "smart_rms");
 
-	$tableNum = "1";
-	$username = "waiter1";
+	$tableNum = $_POST["tableNum"];
 
 	$sql_query = "select waiter_id from table_types where table_no like '$tableNum';";
 
@@ -11,10 +10,8 @@
         $row = mysqli_fetch_assoc($result);
         $userID = $row["waiter_id"];
         echo $userID;
-        
     }
     else{
         echo "Error";
-        echo result;
     }
 ?>
