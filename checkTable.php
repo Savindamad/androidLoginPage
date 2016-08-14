@@ -2,8 +2,9 @@
 	$con = mysqli_connect("br-cdbr-azure-south-b.cloudapp.net", "b50735a87d1621", "8a720e5f", "smart_rms");
 
 	$tableNum = "1";
+	$username = "waiter1";
 
-	$sql_query = "select waiter_id from table where table_no='$tableNum'";
+	$sql_query = "select user_id from user_account where username like '$username';";
 
 	$result = mysqli_query($con,$sql_query);
 	if(mysqli_num_rows($result)>0){
