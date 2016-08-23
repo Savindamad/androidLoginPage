@@ -10,7 +10,6 @@ $temp_array = array();
 if($num_of_rows>0){
 	while($row=mysqli_fetch_assoc($result)){
 		$temp_array[] = $row;
-		echo $row;
 	}
 }
 
