@@ -6,7 +6,7 @@ $sql_query = "select * from menu_items; ";
 $result = mysqli_query($con,$sql_query);
 $num_of_rows = mysqi_num_rows($result);
 
-$temp_array = array();
+
 
 
 
