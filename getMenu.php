@@ -1,4 +1,5 @@
 <?php
+
 $con = mysqli_connect("br-cdbr-azure-south-b.cloudapp.net", "b50735a87d1621", "8a720e5f", "smart_rms");
 $sql_query = "select * from menu_items; ";
 
@@ -13,9 +14,6 @@ if($num_of_rows>0){
 		echo $row;
 	}
 }
-
-header('Content-Type: application/json');
-echo json_encode(array("menu_items"=>$temp_array));
 
 
 ?>
