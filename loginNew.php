@@ -14,7 +14,7 @@ $num_of_rows = mysqli_num_rows($result);
 if($num_of_rows>0){
 	$row=mysqli_fetch_assoc($result);
 	$json["success"]=$row;
-	echo json_encode($json);
+	echo json_encode($row);
 }
 else{
 	$json["fail"]='login fail';
