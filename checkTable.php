@@ -5,18 +5,9 @@
 
     $tableNum = $_POST["tableNum"];
 
-	$sql_query = "select waiter_id from table_types where table_no='$tableNum';";
+	$sql_query = "select waiter_id from table where table_no='$tableNum';";
 	$result = mysqli_query($con,$sql_query);
     $num_of_rows = mysqli_num_rows($result);
-
-	/*if(mysqli_num_rows($result)>0){
-        $row = mysqli_fetch_assoc($result);
-        $userID = $row["waiter_id"];
-        echo $userID;
-    }
-    else{
-        echo "Error";
-    }*/
 
 
     if($num_of_rows>0){
