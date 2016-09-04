@@ -1,4 +1,4 @@
 <?php
-$str = "Hello";
-echo md5($str);
+$str1 = "saman@123";
+echo md5($str1);
 ?>
