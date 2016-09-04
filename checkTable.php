@@ -5,7 +5,7 @@
 
     $tableNum = '2';
 
-	$sql_query = "select waiter_id from table where table_no='$tableNum';";
+	$sql_query = "select waiter_id from table_type where table_no='$tableNum';";
 	$result = mysqli_query($con,$sql_query);
     $num_of_rows = mysqli_num_rows($result);
 
