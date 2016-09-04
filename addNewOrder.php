@@ -11,7 +11,7 @@
 	$num_of_rows = mysqli_num_rows($result);
 	if($num_of_rows>0){
 		$row=mysqli_fetch_assoc($result);
-		echo $row[0];
+		echo $row;
 	}
 	else{
 		echo "error";
