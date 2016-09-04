@@ -1,4 +1,4 @@
 <?php
-$str1 = "saman@123";
+$str1 = "ajith@123";
 echo md5($str1);
 ?>
