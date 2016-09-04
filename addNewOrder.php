@@ -5,7 +5,7 @@
 	//$sql_query= "select max("order_no") as ("primary key") from ("customer_order");";
 	//ql_query = "SELECT * from customer_order ORDER BY order_no DESC LIMIT 0,1;";
 
-	$sql_query = "select max(order_no) from customer_order;";
+	$sql_query = "select min(order_no) from customer_order;";
 	$result = mysqli_query($con,$sql_query);
 
 	$num_of_rows = mysqli_num_rows($result);
