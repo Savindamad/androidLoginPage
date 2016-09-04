@@ -7,7 +7,6 @@
 	//$sql_query = "select * from menu_item; ";
 	$result = mysqli_query($con,$sql_query);
 
-	/*
 	$num_of_rows = mysqli_num_rows($result);
 	if($num_of_rows>0){
 		$row=mysqli_fetch_assoc($result);
@@ -15,6 +14,5 @@
 	}
 	else{
 		echo "error";
-	}*/
-	echo "error";
+	}
 ?>
