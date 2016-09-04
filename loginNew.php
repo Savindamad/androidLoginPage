@@ -7,7 +7,9 @@ header('Content-Type: application/json');
 $username = $_POST["username"];
 $password = $_POST["password"];
 
-$sql_query = "select user_id,f_name,l_name from user_account where username='$username' and password='$password';";
+$password_en = md5($password);
+
+$sql_query = "select user_id,f_name,l_name from user_account where username='$username' and password='$password_en';";
 $result = mysqli_query($con,$sql_query);
 $num_of_rows = mysqli_num_rows($result);
 
