@@ -3,7 +3,7 @@
 	header('Content-Type: application/json');
 
 
-    $tableNum = '2';
+    $tableNum = $_POST["tableNum"];
 
 	$sql_query = "select waiter_id from table_type where table_no='$tableNum';";
 	$result = mysqli_query($con,$sql_query);

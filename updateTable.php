@@ -7,8 +7,9 @@
 	$sql_query = "update table_type set waiter_id='$userID' where table_no='$tableNum';";
 
 	$result = mysqli_query($con,$sql_query);
+    $num_of_rows = mysqli_num_rows($result);
 
-	if(mysqli_num_rows($result)>0){
+	if($num_of_rows>0){
         $json["success"]="true";
         echo json_encode($json);
     }
