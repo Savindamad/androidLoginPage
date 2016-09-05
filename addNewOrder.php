@@ -6,8 +6,8 @@
 	//$sql_query = "SELECT * from customer_order ORDER BY order_no DESC LIMIT 0,1;";
 
 	//$sql_query = "select max(order_no) from customer_order;";
-	//$sql_query = "SELECT MAX(order_no) FROM customer_order;";// SELECT LAST_INSERT_ID();";
-	$sql_query = "select * from customer_order; ";
+	$sql_query = "SELECT MAX(order_no) FROM customer_order;";// SELECT LAST_INSERT_ID();";
+	//$sql_query = "select * from customer_order; ";
 
 	$temp_array = array();
 
