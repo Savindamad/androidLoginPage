@@ -5,14 +5,16 @@
 	//$sql_query= "select max("order_no") as ("primary key") from ("customer_order");";
 	//$sql_query = "SELECT * from customer_order ORDER BY order_no DESC LIMIT 0,1;";
 
-	$sql_query = "select max(order_no) from customer_order;";
+	//$sql_query = "select max(order_no) from customer_order;";
+	$sql_query = "INSERT INTO customer_order (cust_name) VALUES ("savinda"); SELECT LAST_INSERT_ID();";
 	$result = mysqli_query($con,$sql_query);
+    $num_of_rows = mysqli_num_rows($result);
 
-	while($row = mysqli_fetch_array($result)){
-	?>
-		<tr>
-			<td> <?php echo $row['order_no'] ?> </td>
-		</tr>
-	<?php
-	}
+    if($num_of_rows>0){
+        $row=mysqli_fetch_assoc($result);
+        echo $row;
+    }
+    echo "string";
+ 
+
 ?>
