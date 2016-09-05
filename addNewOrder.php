@@ -9,13 +9,10 @@
 	$sql_query = "SELECT MAX(order_no) FROM customer_order;";// SELECT LAST_INSERT_ID();";
 	$result = mysqli_query($con,$sql_query);
     $num_of_rows = mysqli_num_rows($result);
-
-    if($num_of_rows>0){
-        $row=mysqli_fetch_assoc($result);      
-        echo <?php $_POST['order_no']?>;
-        echo "string1";
-    }
-    echo "string";
+    $num = mysqli_fetch_assoc($result);
+    $number = $num['order_no'];
+   
+    echo $number;
  
 
 ?>
