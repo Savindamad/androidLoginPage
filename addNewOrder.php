@@ -12,7 +12,7 @@
 
     if($num_of_rows>0){
         $row=mysqli_fetch_assoc($result);      
-        echo $row;
+        echo <?php $_POST['order_no']?>;
         echo "string1";
     }
     echo "string";
