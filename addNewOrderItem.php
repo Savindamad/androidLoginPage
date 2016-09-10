@@ -28,7 +28,7 @@ echo json_encode($json);
 
 $task_array = json_decode($json,true);
 $arraySize = count($task_array);
-
+echo json_encode($arraySize);
 /*
 for($i=0; $i<$arraySize; $i++){
 	$item_code = $json[$i]["item_code"];
