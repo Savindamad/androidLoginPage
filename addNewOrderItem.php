@@ -17,7 +17,5 @@ for($i=0; $i<$arraySize; $i++){
 	$result = mysqli_query($con,$sql_query);
 }
 
-	$json1["success"]='successfully added';
-	echo json_encode($json);
-
+	echo json_encode(array("order"=>"successfully"));
 ?>
