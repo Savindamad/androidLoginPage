@@ -24,7 +24,7 @@ $json = $_POST["order"];
 
 */
 
-
+/*
 $arraySize = count($json);
 $count = 0;
 
@@ -37,8 +37,8 @@ for($i=0; $i<$arraySize; $i++){
 	$result = mysqli_query($con,$sql_query);
 }
 
-
-	echo json_encode(array("order"=>"successfully"));
+*/
+	echo json_encode(array("order"=>$json));
 
 
 ?>
