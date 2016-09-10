@@ -19,7 +19,7 @@ $json = array(
         "price" => "valore2"
     )
 );
-echo $json;
+echo json_encode($json);
 
 $jsonIterator = new RecursiveIteratorIterator(
     new RecursiveArrayIterator(json_decode($json, TRUE)),
