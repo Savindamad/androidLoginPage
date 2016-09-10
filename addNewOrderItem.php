@@ -6,7 +6,7 @@ header('Content-Type: application/json');
 
 //$json = $_POST["order"];
 //$json = {[{"order_id":"1161","item_code":"2","item_qty":2},{"order_id":"1161","item_code":"58","item_qty":2},{"order_id":"1161","item_code":"1","item_qty":1}]};
-
+/*
 $json = {
 "task": [
 {
@@ -50,4 +50,6 @@ for($i=0; $i<$arraySize; $i++){
 
 
 	echo json_encode(array("order"=>"successfully"));
+
+*/
 ?>
