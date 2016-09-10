@@ -28,7 +28,12 @@ $json = array(array("order_id"=>"1161","item_code"=>"2","item_qty"=>2),array("or
 
 $task_array = json_decode($json,true);
 $arraySize = count($task_array);
+$count = 0;
+while(json[$count]!=null){
+	$count++;
+}
 echo json_encode($arraySize);
+echo json_encode($count);
 /*
 for($i=0; $i<$arraySize; $i++){
 	$item_code = $json[$i]["item_code"];
