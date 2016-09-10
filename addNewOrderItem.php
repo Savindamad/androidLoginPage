@@ -23,6 +23,7 @@ $json = array(array("order_id"=>"1161","item_code"=>"2","item_qty"=>2),array("or
 );
 
 */
+/*
 echo json_encode($json);
 
 $task_array = json_decode($json,true);
