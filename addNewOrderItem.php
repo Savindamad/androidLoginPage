@@ -5,20 +5,21 @@ $con = mysqli_connect("br-cdbr-azure-south-b.cloudapp.net", "b50735a87d1621", "8
 header('Content-Type: application/json');
 
 //$json = $_POST["order"];
-$json = array(
-    array(
-        "region" => "valore",
-        "price" => "valore2"
-    ),
-    array(
-        "region" => "valore",
-        "price" => "valore2"
-    ),
-    array(
-        "region" => "valore",
-        "price" => "valore2"
-    )
-);
+$json = array({
+    "John": {
+        "status":"Wait"
+    },
+    "Jennifer": {
+        "status":"Active"
+    },
+    "James": {
+        "status":"Active",
+        "age":56,
+        "count":10,
+        "progress":0.0029857,
+        "bad":0
+    });
+
 echo $json;
 
 $jsonIterator = new RecursiveIteratorIterator(
