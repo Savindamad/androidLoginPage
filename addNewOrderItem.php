@@ -20,7 +20,7 @@ $json = array(
     )
 );
 
-echo json_encode($json[0]);
+echo json_encode($json[0]["region"]);
 
 $jsonIterator = new RecursiveIteratorIterator(new RecursiveArrayIterator(json_decode($json, TRUE)),RecursiveIteratorIterator::SELF_FIRST);
 foreach ($jsonIterator as $key => $val) {
