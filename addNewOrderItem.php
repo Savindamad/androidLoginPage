@@ -4,7 +4,7 @@ $con = mysqli_connect("br-cdbr-azure-south-b.cloudapp.net", "b50735a87d1621", "8
 
 header('Content-Type: application/json');
 
-//$json = $_POST["order"];
+$json = $_POST["order"];
 //$json = array(array("order_id"=>"1161","item_code"=>"2","item_qty"=>2),array("order_id"=>"1161","item_code"=>"58","item_qty"=>2),array("order_id"=>"1161","item_code"=>"1","item_qty"=>1));
 
 /*$arr = array(
@@ -24,9 +24,8 @@ header('Content-Type: application/json');
 
 */
 
-/*
+
 $arraySize = count($json);
-$count = 0;
 
 
 for($i=0; $i<$arraySize; $i++){
@@ -37,8 +36,8 @@ for($i=0; $i<$arraySize; $i++){
 	$result = mysqli_query($con,$sql_query);
 }
 
-*/
-	echo json_encode($_POST);
+
+	echo json_encode(array("order"=>$json));
 
 
 ?>
