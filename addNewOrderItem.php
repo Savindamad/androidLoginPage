@@ -5,36 +5,24 @@ $con = mysqli_connect("br-cdbr-azure-south-b.cloudapp.net", "b50735a87d1621", "8
 header('Content-Type: application/json');
 
 //$json = $_POST["order"];
-//$json = {[{"order_id":"1161","item_code":"2","item_qty":2},{"order_id":"1161","item_code":"58","item_qty":2},{"order_id":"1161","item_code":"1","item_qty":1}]};
+$json = array(array("order_id"=>"1161","item_code"=>"2","item_qty"=>2),array("order_id"=>"1161","item_code"=>"58","item_qty"=>2),array("order_id"=>"1161","item_code"=>"1","item_qty"=>1));
 
-$json = {
-"task": [
-{
-  "task_id": "3",
-  "task_due": "Oct 26 11:25",
-  "task_completed": "FALSE",
-  "task_desc": "fff",
-  "task_time": "20131026_112531",
-  "task_name": "fff"
-},
-{
-  "task_id": "2",
-  "task_due": "Oct 26 11:25",
-  "task_completed": "FALSE",
-  "task_desc": "rff",
-  "task_time": "20131026_112522",
-  "task_name": "xff"
-},
-{
-  "task_id": "1",
-  "task_due": "Oct 26 11:25",
-  "task_completed": "FALSE",
-  "task_desc": "fggg",
-  "task_time": "20131026_112516",
-  "task_name": "ff"
-  }
- ]};
-/*
+/*$arr = array(
+    array(
+        "region" => "valore",
+        "price" => "valore2"
+    ),
+    array(
+        "region" => "valore",
+        "price" => "valore2"
+    ),
+    array(
+        "region" => "valore",
+        "price" => "valore2"
+    )
+);
+
+*/
 echo json_encode($json);
 
 $task_array = json_decode($json,true);
