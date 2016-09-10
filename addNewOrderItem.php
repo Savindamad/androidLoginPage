@@ -19,6 +19,7 @@ $json = array(
         "price" => "valore2"
     )
 );
+echo $json;
 
 $jsonIterator = new RecursiveIteratorIterator(
     new RecursiveArrayIterator(json_decode($json, TRUE)),
@@ -26,9 +27,9 @@ $jsonIterator = new RecursiveIteratorIterator(
 
 foreach ($jsonIterator as $key => $val) {
     if(is_array($val)) {
-        echo json_encode("$key:\n");
+        echo "$key:\n";
     } else {
-        echo json_encode("$key => $val\n");
+        echo "$key => $val\n";
     }
 }
 
