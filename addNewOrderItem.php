@@ -23,5 +23,5 @@ for($i=0; $i<$arraySize; $i++){
 */
 
 
-	echo json_encode(array("order"=>"successfully"));
+	//echo json_encode(array("order"=>"successfully"));
 ?>
