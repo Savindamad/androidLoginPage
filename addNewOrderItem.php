@@ -21,15 +21,13 @@ $json = array(
 );
 echo json_encode($json);
 
-$jsonIterator = new RecursiveIteratorIterator(
-    new RecursiveArrayIterator(json_decode($json, TRUE)),
-    RecursiveIteratorIterator::SELF_FIRST);
+$jsonIterator = new RecursiveIteratorIterator(new RecursiveArrayIterator(json_decode($json, TRUE)),RecursiveIteratorIterator::SELF_FIRST);
 
 foreach ($jsonIterator as $key => $val) {
     if(is_array($val)) {
-        echo "$key:\n";
+        echo json_encode($key);
     } else {
-        echo "$key => $val\n";
+        echo json_encode($val);
     }
 }
 
