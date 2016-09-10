@@ -2,7 +2,7 @@
 
 $con = mysqli_connect("br-cdbr-azure-south-b.cloudapp.net", "b50735a87d1621", "8a720e5f", "smart_rms");
 
-//header('Content-Type: application/json');
+header('Content-Type: application/json');
 
 //$json = $_POST["order"];
 $json = array(
@@ -26,9 +26,9 @@ $jsonIterator = new RecursiveIteratorIterator(
 
 foreach ($jsonIterator as $key => $val) {
     if(is_array($val)) {
-        echo "$key:\n";
+        echo json_encode("$key:\n");
     } else {
-        echo "$key => $val\n";
+        echo json_encode("$key => $val\n");
     }
 }
 
