@@ -39,7 +39,7 @@ for($i=0; $i<$arraySize; $i++){
 }
 
 */
-	echo json_encode(array("order"=>$var));
+	echo json_encode($var);
 
 
 ?>
