@@ -8,6 +8,9 @@ header('Content-Type: application/json');
 //$json = $_GET["order"];
 $json = json_decode(file_get_contents("php://input"), true);
 $json1 = $json['order'];
+$table_no = $json['table_no'];
+$user_id = $json['user_id'];
+
 //$json = array(array("order_id"=>"1161","item_code"=>"2","item_qty"=>2),array("order_id"=>"1161","item_code"=>"58","item_qty"=>2),array("order_id"=>"1161","item_code"=>"1","item_qty"=>1));
 
 /*$arr = array(
@@ -39,9 +42,23 @@ for($i=0; $i<$arraySize; $i++){
 	$result = mysqli_query($con,$sql_query);
 }
 
+$sql_query1 = "select * from customer_order where table_no = '$table_no' and accepted != 4;";
+
+$result1 = mysqli_query($con,$sql_query1);
+$num_of_rows = mysqli_num_rows($result1);
+
+$temp_array = array();
+
+if($num_of_rows>0){
+	
+	while($row=mysqli_fetch_assoc($result1)){
+		$temp_array[] = $row;
+	}
+}
+
 //	echo json_encode(array("order"=>$json);
 
-	echo json_encode($json1);
+echo json_encode(array("orders"=>$temp_array));
 
 
 ?>
