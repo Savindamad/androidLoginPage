@@ -57,7 +57,7 @@ if($num_of_rows>0){
 		$temp_array1 = array();
 		$orderNo = $row['order_no'];
 		echo json_encode($orderNo);
-		$sql_query2 =  "select * from oder_item where order_no = '$orderNo';";
+		$sql_query2 =  "select * from oder_item where order_no = $orderNo;";
 		echo json_encode('\n');
 		$result2 = mysqli_query($con,$sql_query2);
 		$num_of_rows1 = mysqli_num_rows($result2);
