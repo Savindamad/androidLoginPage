@@ -37,7 +37,7 @@ for($i=0; $i<$arraySize; $i++){
 	$result = mysqli_query($con,$sql_query);
 }
 
-	echo json_encode(array("order"=>$json);
+//	echo json_encode(array("order"=>$json);
 
 
 ?>
