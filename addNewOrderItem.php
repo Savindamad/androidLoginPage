@@ -42,7 +42,9 @@ for($i=0; $i<$arraySize; $i++){
 	$result = mysqli_query($con,$sql_query);
 }
 
-$sql_query1 = "select order_no from customer_order where table_no = '$table_no' and accepted != 4;";
+//$sql_query1 = "select order_no from customer_order where table_no = '$table_no' and accepted != 4;";
+$sql_query1 = "select order_no from customer_order where table_no = 4 and accepted != 3;";
+
 
 $result1 = mysqli_query($con,$sql_query1);
 $num_of_rows = mysqli_num_rows($result1);
