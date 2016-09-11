@@ -63,6 +63,7 @@ if($num_of_rows>0){
 			while($row1=mysqli_fetch_assoc($result2)){
 				$temp_array1[] = $row1;
 			}
+			echo json_encode($temp_array1);
 			$temp_array[] = $temp_array1;
 		}
 	}
