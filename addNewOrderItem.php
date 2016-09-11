@@ -26,7 +26,7 @@ $json = json_decode(file_get_contents("php://input"), true);
 
 */
 
-echo json_encode($json);
+echo json_encode($json['order']);
 
 $arraySize = count($json);
 
