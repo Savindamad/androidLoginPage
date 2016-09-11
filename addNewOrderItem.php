@@ -38,7 +38,7 @@ for($i=0; $i<$arraySize; $i++){
 }
 
 	$tempArry = array();
-	echo json_encode(array("order"=>$arraySize);
+	echo json_encode(array("order"=>$json);
 
 
 ?>
