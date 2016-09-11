@@ -64,7 +64,7 @@ if($num_of_rows>0){
 				$temp_array1[] = $row1;
 			}
 			echo json_encode($temp_array1);
-			$temp_array["order".$j] = $temp_array1;
+			$temp_array[] = $temp_array1;
 		}
 		$j++;
 	}
@@ -72,7 +72,7 @@ if($num_of_rows>0){
 
 //	echo json_encode(array("order"=>$json);
 
-echo json_encode(array("orders"=>$temp_array1));
+echo json_encode(array("orders"=>$temp_array));
 
 
 ?>
