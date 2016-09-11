@@ -58,12 +58,17 @@ if($num_of_rows>0){
 		$orderNo = $row['order_no'];
 		echo json_encode($orderNo);
 		$sql_query2 =  "select * from oder_item where order_no = '$orderNo';";
+		echo json_encode('\n');
 		$result2 = mysqli_query($con,$sql_query2);
-		while($row1=mysqli_fetch_assoc($result2)){
-			echo json_encode($row1);
-			$temp_array1[] = $row1;
+		$num_of_rows1 = mysqli_num_rows($result2);
+		if($num_of_rows1>0){
+
+			while($row1=mysqli_fetch_assoc($result2)){
+				echo json_encode($row1);
+				$temp_array1[] = $row1;
+			}
+			$temp_array[] = $temp_array1;
 		}
-		$temp_array[] = $temp_array1;
 	}
 }
 
