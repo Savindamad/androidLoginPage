@@ -42,7 +42,7 @@ for($i=0; $i<$arraySize; $i++){
 //	echo json_encode(array("order"=>$json);
 
 	$json1["count"]=$arraySize;
-	echo json_encode($json1);
+	echo json_encode($json);
 
 
 ?>
