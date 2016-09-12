@@ -46,19 +46,15 @@ echo json_encode("pass a  ");
 
 //$sql_query1 = "select order_no from customer_order where table_no = '$table_no' and accepted != 4;";
 $sql_query1 = "select order_no from customer_order where table_no = 5 and status != 3;";
-echo json_encode("pass b  ");
 
 $result1 = mysqli_query($con,$sql_query1);
 $num_of_rows = mysqli_num_rows($result1);
-echo json_encode("pass c  ");
 $temp_array = array();
 
 if($num_of_rows>0){
-	echo json_encode("pass d  ");
 	while($row=mysqli_fetch_assoc($result1)){
 		$temp_array1 = array();
 		$orderNo = $row['order_no'];
-		echo json_encode($orderNo);
 		$sql_query2 =  "select * from order_item where order_no = '$orderNo';";
 		$result2 = mysqli_query($con,$sql_query2);
 		$num_of_rows1 = mysqli_num_rows($result2);
