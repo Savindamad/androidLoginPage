@@ -12,6 +12,8 @@ $result1 = mysqli_query($con,$sql_query1);
 $num_of_rows = mysqli_num_rows($result1);
 
 $temp_array = array();
+$arr = array('none' => 'none');
+
 
 if($num_of_rows>0){
 	while($row=mysqli_fetch_assoc($result1)){
@@ -30,7 +32,7 @@ if($num_of_rows>0){
 	echo json_encode(array("orders"=>$temp_array));
 }
 else{
-	echo json_encode(array("orders"=>$"none"));
+	echo json_encode(array("orders"=>"none"));
 }
 
 
