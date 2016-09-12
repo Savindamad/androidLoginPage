@@ -42,8 +42,6 @@ for($i=0; $i<$arraySize; $i++){
 	$result = mysqli_query($con,$sql_query);
 }
 
-echo json_encode("pass a  ");
-
 //$sql_query1 = "select order_no from customer_order where table_no = '$table_no' and accepted != 4;";
 $sql_query1 = "select order_no from customer_order where table_no = 5 and status != 3;";
 
