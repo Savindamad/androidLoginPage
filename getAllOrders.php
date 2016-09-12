@@ -6,7 +6,7 @@ header('Content-Type: application/json');
 $json = json_decode(file_get_contents("php://input"), true);
 $table_no = $json['table_no'];
 
-$sql_query1 = "select order_no from customer_order where table_no = '$table_no' and accepted != 3;";
+$sql_query1 = "select order_no from customer_order where table_no = '$table_no' and status != 3;";
 
 $result1 = mysqli_query($con,$sql_query1);
 $num_of_rows = mysqli_num_rows($result1);
