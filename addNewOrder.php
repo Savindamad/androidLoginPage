@@ -5,7 +5,7 @@
 	$user_id = $_POST["userId"];
 	$table_no = $_POST["tableNum"];
 
-	$sql_query = "insert into customer_order (table_no,ordered_by,accepted) values ('$table_no','$user_id',0);";
+	$sql_query = "insert into customer_order (table_no,ordered_by,status) values ('$table_no','$user_id',0);";
 	$sql_query1 = "select * from customer_order where order_no=(select MAX(order_no) from customer_order);";
 
 
@@ -23,5 +23,4 @@
 		$json["error"]='Can not access database';
         echo json_encode($json);
 	}
-echo json_encode(array("menu_items"=>$temp_array));
 ?>
