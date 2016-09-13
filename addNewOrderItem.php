@@ -4,31 +4,10 @@ $con = mysqli_connect("br-cdbr-azure-south-b.cloudapp.net", "b50735a87d1621", "8
 
 header('Content-Type: application/json');
 
-//$json = $_POST["order"];
-//$json = $_GET["order"];
 $json = json_decode(file_get_contents("php://input"), true);
 $json1 = $json['order'];
 $table_no = $json['table_no'];
 $user_id = $json['user_id'];
-
-//$json = array(array("order_id"=>"1161","item_code"=>"2","item_qty"=>2),array("order_id"=>"1161","item_code"=>"58","item_qty"=>2),array("order_id"=>"1161","item_code"=>"1","item_qty"=>1));
-
-/*$arr = array(
-    array(
-        "region" => "valore",
-        "price" => "valore2"
-    ),
-    array(
-        "region" => "valore",
-        "price" => "valore2"
-    ),
-    array(
-        "region" => "valore",
-        "price" => "valore2"
-    )
-);
-
-*/
 
 
 $arraySize = count($json1);
@@ -50,6 +29,14 @@ $result1 = mysqli_query($con,$sql_query1);
 $num_of_rows = mysqli_num_rows($result1);
 $temp_array = array();
 
+$arr = array(
+    array(
+        "order_no" => "None",
+        "item_id" => "None"
+    )
+);
+
+
 if($num_of_rows>0){
 	while($row=mysqli_fetch_assoc($result1)){
 		$temp_array1 = array();
@@ -65,11 +52,15 @@ if($num_of_rows>0){
 			$temp_array[] = $temp_array1;
 		}
 	}
+	echo json_encode(array("orders"=>$temp_array));
+}
+else{
+	echo json_encode(array("orders"=>$arr));
 }
 
 //	echo json_encode(array("order"=>$json);
 
-echo json_encode(array("orders"=>$temp_array));
+
 
 
 ?>
