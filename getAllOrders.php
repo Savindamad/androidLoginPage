@@ -32,7 +32,8 @@ if($num_of_rows>0){
 	echo json_encode(array("orders"=>$temp_array));
 }
 else{
-	echo json_encode(array("orders"=>"none"));
+
+	echo json_encode(array("orders"=>$arr));
 }
 
 
