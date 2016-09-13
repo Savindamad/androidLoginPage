@@ -12,7 +12,17 @@ $result1 = mysqli_query($con,$sql_query1);
 $num_of_rows = mysqli_num_rows($result1);
 
 $temp_array = array();
-$arr = array('order_no' => 'None');
+//$arr = array('order_no' => 'None');
+$arr = array(
+    array(
+        "order_no" => "None",
+        "item_id" => "None"
+    ),
+    array(
+        "order_no" => "None",
+        "item_id" => "None"
+    )
+);
 
 
 if($num_of_rows>0){
