@@ -8,7 +8,7 @@
 	$result = mysqli_query($con,$sql_query);
 	$num_of_rows = mysqli_num_rows($result);
 
-	$sql_query1 = "update customer_order set status=3 where table_no = 3 and status != 9;";
+	$sql_query1 = "update customer_order set status=3 where table_no = 2 and status != 9;";
 	$result1 = mysqli_query($con,$sql_query1);
     $num_of_rows1 = mysqli_num_rows($result1);
 
