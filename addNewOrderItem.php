@@ -33,6 +33,10 @@ $arr = array(
     array(
         "order_no" => "None",
         "item_id" => "None"
+    ),
+    array(
+        "order_no" => "None",
+        "item_id" => "None"
     )
 );
 
